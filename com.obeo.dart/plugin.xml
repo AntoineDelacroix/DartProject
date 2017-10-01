@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dart -->
+      <package
+            uri="http://www.obeo.fr/dsl/2014/dart"
+            class="com.obeo.dart.DartPackage"
+            genModel="model/dart.genmodel"/>
+   </extension>
+
+
+</plugin>

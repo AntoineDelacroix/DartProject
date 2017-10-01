@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dart -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.obeo.dart.presentation.DartModelWizardID"
+            name="%_UI_DartModelWizard_label"
+            class="com.obeo.dart.presentation.DartModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DartModelFile.gif">
+         <description>%_UI_DartModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dart -->
+      <editor
+            id="com.obeo.dart.presentation.DartEditorID"
+            name="%_UI_DartEditor_label"
+            icon="icons/full/obj16/DartModelFile.gif"
+            extensions="dart"
+            class="com.obeo.dart.presentation.DartEditor"
+            contributorClass="com.obeo.dart.presentation.DartActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
