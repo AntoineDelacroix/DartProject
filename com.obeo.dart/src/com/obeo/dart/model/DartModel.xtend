@@ -11,8 +11,11 @@
 package com.obeo.dart.model
 
 import java.util.List
+import org.eclipse.emf.common.notify.Adapter
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.edit.provider.IItemLabelProvider
+import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory
 
 class DartModel {
 
@@ -35,6 +38,11 @@ class DartModel {
 	}
 
 	def String getLabel(EObject object) {
-		"label"
+		if (!object.equals(null)) {
+			var Adapter adapter = new ReflectiveItemProviderAdapterFactory().adapt(object, IItemLabelProvider)
+			(adapter as IItemLabelProvider).getText(object)
+		} else {
+			"No label"
+		}
 	}
 }

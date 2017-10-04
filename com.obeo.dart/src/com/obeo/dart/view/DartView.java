@@ -35,14 +35,10 @@ public class DartView {
 		for (EObject child : eObjectList) {
 			if (child != null) {
 				String label = dartModel.getLabel(child);
-				try {
-					if (label == null || "".equals(label)) {
-						throw new NoLabelException(child);
-					} else {
-						System.out.println("Object : " + child + " is labeled : " + label);
-					}
-				} catch (Exception e) {
-					e.printStackTrace();
+				if (label == null || "".equals(label)) {
+					System.err.print("Object : " + child + " is labeled : " + label);
+				} else {
+					System.out.println("Object : " + child + " is labeled : " + label);
 				}
 			}
 		}

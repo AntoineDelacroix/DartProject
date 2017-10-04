@@ -22,8 +22,6 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
-import com.obeo.dart.DartPackage;
-
 /**
  * Dart model importer
  * 
@@ -41,7 +39,6 @@ public class DartModelLoader {
 	public EList<EObject> load(String path) throws FileNotFoundException, IOException {
 		EList<EObject> answer = null;
 
-		DartPackage.eINSTANCE.eClass();
 		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
 		Map<String, Object> map = reg.getExtensionToFactoryMap();
 		map.put("dart", new XMIResourceFactoryImpl());
